@@ -34,7 +34,7 @@ if ingredients_list:
 
         st.subheader(fruit_chosen + ' Nutrition Information')
 
-        smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/" + fruit_chosen)  
+        smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/" + {search_on})  
         sf_df = st.dataframe(data=smoothiefroot_response.json(), width='stretch')
 
     time_to_insert = st.button('Submit Order')
